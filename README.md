@@ -25,7 +25,10 @@ Staff Tracker allows for the addition and deletion of employees within a user's 
 
 ## [Code](#code)
 <a name="code"></a>
-
+- MySQL
+- Inquirer
+- Javascript
+- console.table
 
 ## [MockUp](#mockup)
 <a name="mockup"></a>
