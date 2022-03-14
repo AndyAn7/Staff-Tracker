@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "express": "^4.17.3",
+    "inquirer": "^8.2.1",
+    "mysql2": "^2.3.3"
+  },
+  "name": "staff-tracker",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyAn7/Staff-Tracker.git"
+  },
+  "author": "Andrew An",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndyAn7/Staff-Tracker/issues"
+  },
+  "homepage": "https://github.com/AndyAn7/Staff-Tracker#readme"
+}
