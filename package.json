@@ -1,6 +1,6 @@
 {
   "name": "staff-tracker",
-  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)",
+  "description": "Staff Tracker allows for the addition and deletion of employees within a user's company; all pertinent information regarding employment is stored within a database and maintained by the user.",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
