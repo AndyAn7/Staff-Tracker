@@ -1,11 +1,4 @@
 {
-  "dependencies": {
-    "asciiart-logo": "^0.2.6",
-    "console.table": "^0.10.0",
-    "express": "^4.17.3",
-    "inquirer": "^8.2.1",
-    "mysql2": "^2.3.3"
-  },
   "name": "staff-tracker",
   "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)",
   "version": "1.0.0",
@@ -23,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/AndyAn7/Staff-Tracker/issues"
   },
-  "homepage": "https://github.com/AndyAn7/Staff-Tracker#readme"
+  "homepage": "https://github.com/AndyAn7/Staff-Tracker#readme",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "express": "^4.17.3",
+    "inquirer": "^8.2.1",
+    "mysql2": "^2.3.3"
+  }
 }
