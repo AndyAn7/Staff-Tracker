@@ -3,13 +3,13 @@ CREATE DATABASE staff_pool;
 
 USE staff_pool;
 
-CREATE TABLE departments (
+CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR (30) NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE roles (
+CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR (30) NOT NULL,
     department_id INT,
@@ -21,7 +21,7 @@ CREATE TABLE roles (
             ON DELETE CASCADE
 );
 
-CREATE TABLE employees (
+CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR (30) NOT NULL,
     last_name VARCHAR (30) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE employees (
     PRIMARY KEY (id),
 
     FOREIGN KEY (role_id)
-        REFERENCES roles (id)
+        REFERENCES role (id)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
     
