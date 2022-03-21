@@ -36,7 +36,7 @@ Staff Tracker allows for the addition and deletion of employees within a user's 
 
 ## [UI/Video Tutorial of Application](#tutorial)
 <a name="tutorial"></a>
-[![Tutorial](https://youtu.be/pCp4e6PscmY)
+[![Tutorial]((https://youtu.be/pCp4e6PscmY)
 
 ## [User Story](#user)
 <a name="user"></a>
