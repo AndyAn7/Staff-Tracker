@@ -99,7 +99,7 @@ function viewRole(uInput) {
     });
 }
 
-function cDept(deptRes) {
+function addDept(deptRes) {
 
     dBase.query(`SELECT * FROM department`, async (err, res) => {
         const depts= await res.map(({ id, name }) => ({
@@ -113,18 +113,12 @@ function cDept(deptRes) {
             name: 'name',
             message: 'Department Name?'
         },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'Department ID?'
-        }
     ])
 
     .then((deptRes) => {
-        depts.value = deptRes.id;
         depts.name = deptRes.name;
 
-        dBase.query(`INSERT INTO department (id, name) VALUES (${depts.value}, '${depts.name}');`, (err, res) => {
+        dBase.query(`INSERT INTO department (id, name) VALUES (NULL, '${depts.name}');`, (err, res) => {
             if (err) throw err;
             console.log('\nDepartment', depts.name, 'Added\n');
             viewDept();
@@ -156,12 +150,6 @@ function addRole() {
             message: 'Department?',
             choices: deptsA
         },
-        {
-            type: 'input',
-            name: 'role_id',
-            message: 'Role ID?'
-
-        }
     ])
 
     .then((roleRes) => {
@@ -170,10 +158,9 @@ function addRole() {
             title: roleRes.title,
             salary: roleRes.salary,
             department_id: roleRes.department_id,
-            id: roleRes.role_id
         }
 
-        dBase.query(`INSERT INTO role (id, title, salary, department_id) VALUES (${sRole.id}, '${sRole.title}', ${sRole.salary}, ${sRole.department_id});`, (err, res) => {
+        dBase.query(`INSERT INTO role (id, title, salary, department_id) VALUES (NULL, '${sRole.title}', ${sRole.salary}, ${sRole.department_id});`, (err, res) => {
             if (err) throw err;
             console.log('\nRole', sRole.title, 'Added\n');
             viewRole();
@@ -216,11 +203,6 @@ function addStaff() {
             message: 'Manager?',
             choices: empS
         },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'Employee ID?'
-        }
     ])
 
     .then((staffRes) => {
@@ -230,14 +212,12 @@ function addStaff() {
             manID = null;
             manName = null;
         } else {
-            for (const data of res) {
-                data.name = `${data.first_name} ${data.last_name}`;
-                if (data.name === staffRes.manager_id) {
-                    manID = data.id;
-                    manName = data.name;
-                }}}
+            manID = staffRes.manager_id;
+            manName = staffRes.manager_id;
+        }
 
         const sStaff = {
+            id: staffRes.id,
             first_name: staffRes.first_name,
             last_name: staffRes.last_name,
             role_id: staffRes.role_id,
@@ -245,7 +225,7 @@ function addStaff() {
 
         }
 
-        dBase.query(`INSERT INTO employee (id, first_name, last_name, role_id, manager_id) VALUES (${sStaff.id}, '${sStaff.first_name}', '${sStaff.last_name}', ${sStaff.role_id}, ${manID});`, (err, res) => {
+        dBase.query(`INSERT INTO employee (id, first_name, last_name, role_id, manager_id) VALUES (NULL, '${sStaff.first_name}', '${sStaff.last_name}', ${sStaff.role_id}, ${manID});`, (err, res) => {
             if (err) throw err;
             console.log('\nEmployee', sStaff.first_name, sStaff.last_name, 'Added\n');
             viewStaff();

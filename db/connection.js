@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-const util = require('util');
+// const util = require('util');
 
 const join = mysql.createConnection({
     host: 'localhost',
@@ -8,9 +8,7 @@ const join = mysql.createConnection({
     database: 'staff_pool'
 });
 
-connection.query = util.promisify(connection.query);
-
-connection.connect(function (err) {
+join.connect(function (err) {
     if (err) {
         throw err;
     } else {
