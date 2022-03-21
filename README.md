@@ -32,11 +32,11 @@ Staff Tracker allows for the addition and deletion of employees within a user's 
 
 ## [MockUp](#mockup)
 <a name="mockup"></a>
-<!-- ![image]() -->
+![image](https://github.com/AndyAn7/Staff-Tracker/blob/main/assets/SS.png?raw=true)
 
 ## [UI/Video Tutorial of Application](#tutorial)
 <a name="tutorial"></a>
-<!-- [![Tutorial]() -->
+[![Tutorial](https://youtu.be/pCp4e6PscmY)
 
 ## [User Story](#user)
 <a name="user"></a>
