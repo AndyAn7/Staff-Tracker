@@ -215,7 +215,7 @@ function addStaff() {
             name: 'manager_id',
             message: 'Manager?',
             choices: empS
-        }
+        },
         {
             type: 'input',
             name: 'id',
@@ -293,4 +293,3 @@ function upStaffRole() {
                 viewStaff();
             })})})});
 }
-
