@@ -1,8 +1,10 @@
+// globals
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const conT = require('console.table');
 const dBase = require('./db/connection');
 
+// user choices
 let staff = {
     viewStaff: 'View Staff',
     addStaff: 'Add Staff',
@@ -33,6 +35,7 @@ async function initialize() {
                 staff.quit
             ]}])
         
+        // switch statement
         .then((uInput) => {
 
         switch (uInput.staff) {
@@ -62,6 +65,7 @@ async function initialize() {
                 break;
         }})};
 
+// view
 function viewDept(deptRes) {
     dBase.query('SELECT * FROM department', (err, res) => {
         if (err) throw err;
@@ -99,6 +103,7 @@ function viewRole(uInput) {
     });
 }
 
+// create
 function addDept(deptRes) {
 
     dBase.query(`SELECT * FROM department`, async (err, res) => {
@@ -232,6 +237,7 @@ function addStaff() {
         })})})});
 }
 
+// update
 function upStaffRole() {
     dBase.query('SELECT * FROM role', async (err, res) => {
         const roleU = await res.map(({ id, title }) => ({
